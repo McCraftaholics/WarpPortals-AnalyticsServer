@@ -13,8 +13,8 @@ import java.util.UUID;
 public class AnalyticsServerReportEntity implements Serializable {
     private static final long serialVersionUID = -1798070786983154676L;
 
-    public String serverId;
     public String timestamp;
+    public String serverName;
     public String warpPortalsVersion;
     public int maxPlayers;
     public String bukkitVersion;
@@ -33,8 +33,8 @@ public class AnalyticsServerReportEntity implements Serializable {
     }
 
     public AnalyticsServerReportEntity(AnalyticsReportServer report) {
-        this.serverId = report.serverId;
         this.timestamp = report.timestamp;
+        this.serverName = report.serverName;
         this.warpPortalsVersion = report.warpPortalsVersion;
         this.maxPlayers = report.maxPlayers;
         this.bukkitVersion = report.bukkitVersion;
